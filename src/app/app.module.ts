@@ -45,7 +45,7 @@ import {AuthModule, LogLevel} from 'angular-auth-oidc-client';
         authority: 'http://localhost:8080/realms/awms',
         redirectUrl: window.location.origin,
         postLogoutRedirectUri: window.location.origin,
-        clientId: 'awms-web-client',
+        clientId: 'awms-web-app',
         scope: 'openid profile email offline_access',
         responseType: 'code',
         silentRenew: true,
