@@ -6,11 +6,7 @@ import { of as observableOf } from 'rxjs';
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import {
-  AnalyticsService,
   LayoutService,
-  PlayerService,
-  SeoService,
-  StateService,
 } from './utils';
 import { UserData } from './data/users';
 import { ElectricityData } from './data/electricity';
@@ -138,11 +134,7 @@ export const NB_CORE_PROVIDERS = [
   {
     provide: NbRoleProvider, useClass: NbSimpleRoleProvider,
   },
-  AnalyticsService,
   LayoutService,
-  PlayerService,
-  SeoService,
-  StateService,
 ];
 
 @NgModule({
