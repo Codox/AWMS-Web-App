@@ -19,6 +19,7 @@ export class ViewComponent implements OnDestroy, OnInit {
 
   settings = {
     actions: {
+      columnTitle: '',
       position: 'right',
       width: '5%',
       custom: [
@@ -46,6 +47,15 @@ export class ViewComponent implements OnDestroy, OnInit {
         valuePrepareFunction: (addressLines: string[]) => {
           return addressLines.join(', ');
         },
+      },
+      zipCode: {
+        title: 'Zip Code',
+        type: 'string',
+      },
+      country: {
+        title: 'Country',
+        type: 'string',
+        width: '10%',
       },
     },
   };
