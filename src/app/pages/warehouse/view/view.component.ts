@@ -19,18 +19,12 @@ export class ViewComponent implements OnDestroy, OnInit {
 
   settings = {
     actions: {
+      position: 'right',
+      width: '5%',
       custom: [
         {
           name: 'view',
           title: '<img src="assets/icons/outline/eye-outline.svg" width="20" height="20" >',
-        },
-        {
-          name: 'edit',
-          title: '<img src="assets/icons/outline/edit-2-outline.svg" width="20" height="20" >',
-        },
-        {
-          name: 'delete',
-          title: '<img src="assets/icons/outline/trash-2-outline.svg" width="20" height="20" >',
         },
       ],
       add: false,
@@ -42,17 +36,16 @@ export class ViewComponent implements OnDestroy, OnInit {
         title: 'Name',
         type: 'string',
       },
-      code: {
-        title: 'Code',
-        type: 'string',
-      },
-      active: {
-        title: 'Active',
-        type: 'boolean',
-      },
       contactTelephone: {
         title: 'Contact Telephone',
         type: 'string',
+      },
+      addressLines: {
+        title: 'Address Lines',
+        type: 'array',
+        valuePrepareFunction: (addressLines: string[]) => {
+          return addressLines.join(', ');
+        },
       },
     },
   };
