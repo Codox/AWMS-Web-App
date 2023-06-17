@@ -48,6 +48,18 @@ export class ViewComponent implements OnDestroy, OnInit {
           return addressLines.join(', ');
         },
       },
+      town: {
+        title: 'Town',
+        type: 'string',
+      },
+      city: {
+        title: 'City',
+        type: 'string',
+      },
+      region: {
+        title: 'Region',
+        type: 'string',
+      },
       zipCode: {
         title: 'Zip Code',
         type: 'string',
