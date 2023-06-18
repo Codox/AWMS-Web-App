@@ -1,7 +1,8 @@
 export interface Warehouse {
   uuid: string;
   name: string;
-  addressLine: string[];
+  contactTelephone: string;
+  addressLines: string[];
   town: string;
   region: string;
   city: string;
