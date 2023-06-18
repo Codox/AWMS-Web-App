@@ -4,6 +4,7 @@ import {NbWindowService} from '@nebular/theme';
 import {NavigationExtras, Router} from '@angular/router';
 import {ServerDataSource} from 'ng2-smart-table';
 import {getFilterableTableSettings} from '../../../../shared/filterable-table-settings';
+import {CVEData} from '../../../shared/cve-data';
 
 @Component({
   selector: 'ngx-warehouse-view',
@@ -87,13 +88,14 @@ export class ViewComponent implements OnDestroy, OnInit {
   async onCustom(event: any) {
     console.log(`event`, event);
     if (event.action === 'view') {
-      const extraData = {
-        key1: 'value1',
-        key2: 'value2',
+      const cveData: CVEData = {
+        mode: 'view',
       };
 
       const navigationExtras: NavigationExtras = {
-        state: extraData,
+        queryParams: {
+          ...cveData,
+        },
       };
 
       await this.router.navigate(['/pages/warehouse/view/', event.data.uuid], navigationExtras);

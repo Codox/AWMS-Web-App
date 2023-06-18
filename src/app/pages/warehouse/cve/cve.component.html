@@ -1,1 +1,17 @@
-<p>test</p>
+<!-- [formGroup]="formOptions" -->
+<!--           <button nbButton type="submit" [disabled]="!formOptions?.valid">Submit</button> -->
+
+<form>
+  <nb-layout>
+    <nb-layout-header>{{ utils.upperFirst(mode) }} Warehouse</nb-layout-header>
+    <nb-layout-column style="padding-right: 0; padding-left: 0">
+
+      <ng-content></ng-content>
+
+      <nb-card>
+        <nb-card-body>
+        </nb-card-body>
+      </nb-card>
+    </nb-layout-column>
+  </nb-layout>
+</form>
