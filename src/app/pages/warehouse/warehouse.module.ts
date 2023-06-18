@@ -3,14 +3,18 @@ import {RouterModule, Routes} from '@angular/router';
 import {ViewComponent} from './view/view.component';
 import {NbCardModule, NbLayoutModule} from '@nebular/theme';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
+import {CVEComponent} from './cve/cve.component';
 
 const routes: Routes = [{
   path: '',
-  component: ViewComponent,
   children: [
     {
       path: 'view',
       component: ViewComponent,
+    },
+    {
+      path: 'view/:uuid',
+      component: CVEComponent,
     },
   ],
 }];
@@ -24,6 +28,7 @@ const routes: Routes = [{
   ],
   declarations: [
     ViewComponent,
+    CVEComponent,
   ],
 })
 export class WarehouseModule { }

@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NbWindowService} from '@nebular/theme';
-import {Router} from '@angular/router';
+import {NavigationExtras, Router} from '@angular/router';
 import {ServerDataSource} from 'ng2-smart-table';
 import {getFilterableTableSettings} from '../../../../shared/filterable-table-settings';
 
@@ -81,6 +81,22 @@ export class ViewComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    console.log('oninit');
+   //  console.log('oninit');
+  }
+
+  async onCustom(event: any) {
+    console.log(`event`, event);
+    if (event.action === 'view') {
+      const extraData = {
+        key1: 'value1',
+        key2: 'value2',
+      };
+
+      const navigationExtras: NavigationExtras = {
+        state: extraData,
+      };
+
+      await this.router.navigate(['/pages/warehouse/view/', event.data.uuid], navigationExtras);
+    }
   }
 }
