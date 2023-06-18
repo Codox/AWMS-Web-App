@@ -6,8 +6,9 @@
     <nb-layout-header>{{ utils.upperFirst(mode) }} Warehouse</nb-layout-header>
     <nb-layout-column style="padding-right: 0; padding-left: 0">
 
+      <!-- Name + UUID-->
       <nb-card>
-        <nb-card-header>General Information</nb-card-header>
+        <nb-card-header>General</nb-card-header>
         <nb-card-body>
           <div class="row">
             <!-- Name -->
@@ -27,8 +28,64 @@
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="contactTelephone" class="label">Contact Telephone</label>
+                <input id="contactTelephone" type="text" nbInput fullWidth [value]="warehouse?.contactTelephone" placeholder="Contact Telephone">
+              </div>
+            </div>
+          </div>
         </nb-card-body>
       </nb-card>
+
+      <nb-card>
+        <nb-card-header>Address</nb-card-header>
+        <nb-card-body>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group" *ngFor="let addressLine of warehouse?.addressLines; let i = index">
+                <label for="addressLine" class="label">Address Line {{ i + 1 }}</label>
+                <input id="addressLine" type="text" nbInput fullWidth [value]="addressLine" placeholder="Address Line {{ i + 1 }}">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="town" class="label">Town</label>
+                <input id="town" type="text" nbInput fullWidth [value]="warehouse?.town" placeholder="Town">
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="city" class="label">City</label>
+                <input id="city" type="text" nbInput fullWidth [value]="warehouse?.city" placeholder="City">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="region" class="label">Region</label>
+                <input id="region" type="text" nbInput fullWidth [value]="warehouse?.region" placeholder="Region">
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="zipCode" class="label">Zip Code</label>
+                <input id="zipCode" type="text" nbInput fullWidth [value]="warehouse?.zipCode" placeholder="Zip Code">
+              </div>
+            </div>
+          </div>
+
+        </nb-card-body>
+      </nb-card>
+
     </nb-layout-column>
   </nb-layout>
 </form>
