@@ -86,7 +86,6 @@ export class ViewComponent implements OnDestroy, OnInit {
   }
 
   async onCustom(event: any) {
-    console.log(`event`, event);
     if (event.action === 'view') {
       const cveData: CVEData = {
         mode: 'view',

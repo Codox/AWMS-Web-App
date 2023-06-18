@@ -6,10 +6,27 @@
     <nb-layout-header>{{ utils.upperFirst(mode) }} Warehouse</nb-layout-header>
     <nb-layout-column style="padding-right: 0; padding-left: 0">
 
-      <ng-content></ng-content>
-
       <nb-card>
+        <nb-card-header>General Information</nb-card-header>
         <nb-card-body>
+          <div class="row">
+            <!-- Name -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="name" class="label">Name</label>
+                <input id="name" type="text" nbInput fullWidth [value]="warehouse?.name" placeholder="Name">
+              </div>
+            </div>
+
+            <!-- UUID -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="uuid" class="label">UUID</label>
+                <input id="uuid" type="text" nbInput fullWidth [value]="warehouse?.uuid" placeholder="UUID">
+              </div>
+            </div>
+          </div>
+
         </nb-card-body>
       </nb-card>
     </nb-layout-column>
