@@ -20,7 +20,7 @@ import {CVEMode} from '../../shared/cve-mode';
     <div *ngIf="mode === 'view'" class="form-group">
       <label [htmlFor]="objectName" class="label">{{ humanName }}</label>
 
-      <input type="text" nbInput fullWidth [id]="objectName" [placeholder]="humanName" [value]="value ? value : ' '" [disabled]="true">
+      <input type="text" nbInput fullWidth [id]="objectName" [placeholder]="humanName" [value]="value ? value : formOptions.controls[objectName].value" [disabled]="true">
     </div>
   `,
 })
