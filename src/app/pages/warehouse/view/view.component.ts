@@ -4,7 +4,7 @@ import {NbWindowService} from '@nebular/theme';
 import {NavigationExtras, Router} from '@angular/router';
 import {ServerDataSource} from 'ng2-smart-table';
 import {getFilterableTableSettings} from '../../../../shared/filterable-table-settings';
-import {CVEData} from '../../../shared/cve-data';
+import {CVEData} from '../../../shared/cve-mode';
 
 @Component({
   selector: 'ngx-warehouse-view',
