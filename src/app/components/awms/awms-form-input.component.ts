@@ -1,6 +1,7 @@
 import {AWMSFormComponent} from './awms-form.component';
 import {Component, Input} from '@angular/core';
 import {FormGroup} from '@angular/forms';
+import {CVEMode} from '../../shared/cve-mode';
 
 @Component({
   selector: 'ngx-awms-form-input',
@@ -25,7 +26,7 @@ import {FormGroup} from '@angular/forms';
 })
 export class AWMSFormInputComponent extends AWMSFormComponent {
   @Input() formOptions: FormGroup;
-  @Input() mode: 'edit' | 'view' = 'view';
+  @Input() mode: CVEMode;
   @Input() humanName?: string;
   @Input() objectName?: string;
   @Input() value?: string;
