@@ -19,7 +19,7 @@ import {Country} from '../../interfaces/country.interface';
         <nb-option *ngFor="let country of countries" [value]="country.alpha['2']">{{ country.emoji }}&nbsp;&nbsp;{{ country.name + ' (' + country.alpha['2'] + ')              ' }}</nb-option>
       </nb-select>
 
-      <small class="text-danger" *ngIf="isFormValidationIssues(formOptions, objectName)">
+      <small class="text-danger" *ngIf="formOptions && isFormValidationIssues(formOptions, objectName)">
         {{ formatErrorsIntoSingleMessage(formOptions.controls[objectName].errors) }}
       </small>
 
