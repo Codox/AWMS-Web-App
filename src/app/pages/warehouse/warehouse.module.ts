@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ViewComponent} from './view/view.component';
-import {NbCardModule, NbInputModule, NbLayoutModule} from '@nebular/theme';
+import {NbButtonModule, NbCardModule, NbIconModule, NbInputModule, NbLayoutModule} from '@nebular/theme';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
 import {CVEComponent} from './cve/cve.component';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,7 @@ const routes: Routes = [{
       component: ViewComponent,
     },
     {
-      path: 'view/:uuid',
+      path: ':uuid',
       component: CVEComponent,
     },
   ],
@@ -32,6 +32,8 @@ const routes: Routes = [{
     NbInputModule,
     AWMSComponentModule,
     ReactiveFormsModule,
+    NbButtonModule,
+    NbIconModule,
   ],
   declarations: [
     ViewComponent,

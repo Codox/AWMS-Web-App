@@ -97,7 +97,7 @@ export class ViewComponent implements OnDestroy, OnInit {
         },
       };
 
-      await this.router.navigate(['/pages/warehouse/view/', event.data.uuid], navigationExtras);
+      await this.router.navigate(['/pages/warehouse/', event.data.uuid], navigationExtras);
     }
   }
 }
