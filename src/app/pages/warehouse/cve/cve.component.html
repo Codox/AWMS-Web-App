@@ -93,6 +93,20 @@
         </nb-card-body>
       </nb-card>
 
+      <nb-card>
+        <nb-card-body>
+          <div *ngIf="mode === 'view'">
+            <button nbButton status="primary" (click)="switchToEditMode()"><nb-icon icon="edit-outline"></nb-icon>Edit</button>
+          </div>
+
+          <div *ngIf="mode === 'edit'">
+            <!--[disabled]="!companyForm.valid"-->
+            <button nbButton status="success" (click)="save()" style="margin-right: 10px">Save</button>
+            <button nbButton status="danger">Discard</button>
+          </div>
+        </nb-card-body>
+      </nb-card>
+
     </nb-layout-column>
   </nb-layout>
 </form>
