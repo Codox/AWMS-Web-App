@@ -4,7 +4,7 @@ import {AWMSFormCountryDropdownComponent} from './awms-form-country-dropdown.com
 import {ReactiveFormsModule} from '@angular/forms';
 import {NbCardModule, NbInputModule, NbSelectModule} from '@nebular/theme';
 import {AWMSFormInputComponent} from './awms-form-input.component';
-import {AWMSYesNoDialogueComponent} from './awms-yes-no-dialogue.component';
+import {AWMSConfirmationDialogueComponent} from './awms-confirmation-dialogue.component';
 
 @NgModule({
   imports: [
@@ -17,12 +17,12 @@ import {AWMSYesNoDialogueComponent} from './awms-yes-no-dialogue.component';
   declarations: [
     AWMSFormCountryDropdownComponent,
     AWMSFormInputComponent,
-    AWMSYesNoDialogueComponent,
+    AWMSConfirmationDialogueComponent,
   ],
   exports: [
     AWMSFormCountryDropdownComponent,
     AWMSFormInputComponent,
-    AWMSYesNoDialogueComponent,
+    AWMSConfirmationDialogueComponent,
   ],
 })
 export class AWMSComponentModule {}

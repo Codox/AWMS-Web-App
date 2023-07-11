@@ -13,11 +13,11 @@ import { NbDialogRef } from '@nebular/theme';
     </nb-card>
   `,
 })
-export class AWMSYesNoDialogueComponent {
+export class AWMSConfirmationDialogueComponent {
   title: string;
   message: string;
 
-  constructor(protected dialogRef: NbDialogRef<AWMSYesNoDialogueComponent>) {}
+  constructor(protected dialogRef: NbDialogRef<AWMSConfirmationDialogueComponent>) {}
 
   confirm(): void {
     this.dialogRef.close(true);
