@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AWMSFormCountryDropdownComponent} from './awms-form-country-dropdown.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {NbCardModule, NbInputModule, NbSelectModule} from '@nebular/theme';
+import {NbButtonModule, NbCardModule, NbInputModule, NbSelectModule} from '@nebular/theme';
 import {AWMSFormInputComponent} from './awms-form-input.component';
 import {AWMSConfirmationDialogueComponent} from './awms-confirmation-dialogue.component';
 
@@ -13,6 +13,7 @@ import {AWMSConfirmationDialogueComponent} from './awms-confirmation-dialogue.co
     NbSelectModule,
     NbInputModule,
     NbCardModule,
+    NbButtonModule,
   ],
   declarations: [
     AWMSFormCountryDropdownComponent,

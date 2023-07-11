@@ -6,7 +6,7 @@ import {CVEMode} from '../../shared/cve-mode';
 @Component({
   selector: 'ngx-awms-form-input',
   template: `
-    <div *ngIf="mode === 'edit'" class="form-group" [formGroup]="formOptions">
+    <div class="form-group" [formGroup]="formOptions">
       <label [htmlFor]="objectName" class="label">{{ humanName }}</label>
 
       <input type="text" nbInput fullWidth [id]="objectName" [placeholder]="humanName"
@@ -15,12 +15,6 @@ import {CVEMode} from '../../shared/cve-mode';
       <small class="text-danger" *ngIf="isFormValidationIssues(formOptions, objectName)">
         {{ formatErrorsIntoSingleMessage(formOptions.controls[objectName].errors) }}
       </small>
-    </div>
-
-    <div *ngIf="mode === 'view'" class="form-group">
-      <label [htmlFor]="objectName" class="label">{{ humanName }}</label>
-
-      <input type="text" nbInput fullWidth [id]="objectName" [placeholder]="humanName" [value]="value ? value : formOptions.controls[objectName].value" [disabled]="true">
     </div>
   `,
 })

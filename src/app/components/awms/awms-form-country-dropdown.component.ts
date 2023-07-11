@@ -11,11 +11,11 @@ import {Country} from '../../interfaces/country.interface';
 
       <br>
 
-      <nb-select *ngIf="dropdownType === 'telephone'" [placeholder]="humanName" [id]="objectName" [formControlName]="objectName" style="width: 100%">
+      <nb-select *ngIf="dropdownType === 'telephone'" [placeholder]="humanName" [id]="objectName" [formControlName]="objectName" [disabled]="disabled" style="width: 100%">
         <nb-option *ngFor="let country of countries" [value]="country.alpha['2']">{{ country.emoji }}&nbsp;&nbsp;{{ country.name + ' (+' + country.callingCode + ')              ' }}</nb-option>
       </nb-select>
 
-      <nb-select *ngIf="dropdownType === 'countries'" [placeholder]="humanName" [id]="objectName" [formControlName]="objectName" style="width: 100%">
+      <nb-select *ngIf="dropdownType === 'countries'" [placeholder]="humanName" [id]="objectName" [formControlName]="objectName" [disabled]="disabled" style="width: 100%">
         <nb-option *ngFor="let country of countries" [value]="country.alpha['2']">{{ country.emoji }}&nbsp;&nbsp;{{ country.name + ' (' + country.alpha['2'] + ')              ' }}</nb-option>
       </nb-select>
 
@@ -33,6 +33,7 @@ export class AWMSFormCountryDropdownComponent extends AWMSFormComponent implemen
   @Input() formOptions: FormGroup;
   @Input() humanName?: string;
   @Input() objectName?: string;
+  @Input() disabled?: boolean = false;
   @Input() countries: Country[];
   @Input() dropdownType: 'countries' | 'telephone' = 'countries';
 
